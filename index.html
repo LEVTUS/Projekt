@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Зоряні Війни</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #111;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    header h1 {
+      font-size: 48px;
+      color: #ffe81f;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    nav {
+      background-color: #222;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #ffe81f;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 30px;
+    }
+
+    h2 {
+      color: #ffe81f;
+      border-bottom: 1px solid #ffe81f;
+      padding-bottom: 10px;
+    }
+
+    .character {
+      margin-bottom: 20px;
+    }
+
+    .character img {
+      max-width: 200px;
+      border-radius: 10px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #111;
+      color: #888;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Зоряні Війни</h1>
+  <p>Хай буде з тобою Сила!</p>
+</header>
+
+<nav>
+  <a href="#characters">Персонажі</a>
+  <a href="#movies">Фільми</a>
+  <a href="#about">Про сагу</a>
+</nav>
+
+<section id="about">
+  <h2>Про сагу</h2>
+  <p>
+    «Зоряні війни» — епічна космічна сага, створена Джорджем Лукасом. Історія охоплює боротьбу джедаїв і ситхів, світла й темряви, свободи й влади у далекій-далекій галактиці.
+  </p>
+</section>
+
+<section id="characters">
+  <h2>Відомі персонажі</h2>
+  <div class="character">
+    <img src="https://upload.wikimedia.org/wikipedia/en/8/8f/Luke_Skywalker.png" alt="Люк Скайвокер">
+    <strong>Люк Скайвокер</strong> — герой Альянсу Повстанців, джедай і син Енакіна Скайвокера.
+  </div>
+  <div class="character">
+    <img src="" alt="Дарт Вейдер">
+    <strong>Дарт Вейдер</strong> — один з наймогутніших ситхів, у минулому — джедай Енакін Скайвокер.
+  </div>
+</section>
+
+<section id="movies">
+  <h2>Фільми</h2>
+  <ul>
+    <li>Епізод I — Прихована загроза</li>
+    <li>Епізод II — Атака клонів</li>
+    <li>Епізод III — Помста ситхів</li>
+    <li>Епізод IV — Нова надія</li>
+    <li>Епізод V — Імперія завдає удару у відповідь</li>
+    <li>Епізод VI — Повернення джедая</li>
+    <li>Епізод VII — Пробудження сили</li>
+    <li>Епізод VIII — Останні джедаї</li>
+    <li>Епізод IX — Скайвокер. Схід</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Фан-сайт «Зоряні війни». Неофіційний проєкт.
+</footer>
+<script>
+// === Анімація зірок на фоні ===
+const canvas = document.createElement('canvas');
+document.body.appendChild(canvas);
+canvas.style.position = 'fixed';
+canvas.style.top = 0;
+canvas.style.left = 0;
+canvas.style.zIndex = -1;
+canvas.style.width = '100%';
+canvas.style.height = '100%';
+canvas.style.pointerEvents = 'none';
+
+const ctx = canvas.getContext('2d');
+let stars = [];
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  stars = [];
+  for (let i = 0; i < 200; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.5 + 0.5,
+      dx: (Math.random() - 0.5) * 0.5,
+      dy: (Math.random() - 0.5) * 0.5
+    });
+  }
+}
+
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = 'white';
+  stars.forEach(star => {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+    ctx.fill();
+    star.x += star.dx;
+    star.y += star.dy;
+
+    if (star.x < 0 || star.x > canvas.width) star.dx *= -1;
+    if (star.y < 0 || star.y > canvas.height) star.dy *= -1;
+  });
+  requestAnimationFrame(drawStars);
+}
+
+resizeCanvas();
+drawStars();
+window.addEventListener('resize', resizeCanvas);
+
+// === Анімація появи секцій при прокрутці ===
+const sections = document.querySelectorAll('section, .character');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+sections.forEach(section => {
+  section.style.opacity = 0;
+  section.style.transform = 'translateY(40px)';
+  section.style.transition = 'all 0.8s ease-out';
+  observer.observe(section);
+});
+
+// === Анімація заголовка ===
+const header = document.querySelector('header h1');
+header.style.transition = 'transform 1s ease-in-out';
+header.addEventListener('mouseover', () => {
+  header.style.transform = 'scale(1.1) rotate(-1deg)';
+});
+header.addEventListener('mouseout', () => {
+  header.style.transform = 'scale(1)';
+});
+</script>
+
+</body>
+</html>
+
+
+
+
