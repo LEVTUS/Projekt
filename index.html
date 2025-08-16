@@ -83,9 +83,10 @@
 <section id="about">
   <h2>Про сагу</h2>
   <p>
-Первый фильм вышел 25 мая 1977 года под названием «Звёздные войны». Фильм имел огромный кассовый успех, что фактически спасло компанию 20th Century Fox от угрожавшего ей тогда банкротства. Когда сомнения в окупаемости проекта отпали, первый фильм получил подзаголовок «Новая надежда», и вскоре за ним появились два продолжения — «Империя наносит ответный удар» (режиссёр Ирвин Кершнер, 1980) и «Возвращение джедая» (режиссёр Ричард Маркуанд, 1983).
-
-С самого начала отличительной чертой франшизы «Звёздные войны» стало массовое производство сопутствующих товаров, таких как пластмассовые фигурки персонажей, технических средств из фильмов и других игрушек, футболок с символикой фильма и т. д. Успешные маркетинговые ходы Джорджа Лукаса позволяли поддерживать у публики высокий уровень интереса к «Звёздным войнам» в перерывах между выходами фильмов. Доходы от продажи этих товаров превосходят доходы от проката самих фильмов[7]. Ту же цель преследовало создание фильмов-спин-оффов: помимо признанного провальным «Праздничного спецвыпуска» (1978), были сняты телефильмы «Караван смельчаков. Приключения эвоков» (1984) и «Эвоки. Битва за Эндор» (1985), а также мультсериалы «Эвоки» (1985—1986) и «Дроиды» (1985—1986). В 1980-х годах была выпущена серия компьютерных игр для различных платформ по мотивам фильмов трилогии. Компания «West End Games» выпускала настольные ролевые игры по «Звёздным войнам».
+    Перший фільм вийшов 25 травня 1977 року під назвою «Зоряні війни». 
+    Стрічка мала величезний касовий успіх, що фактично врятувало компанію 20th Century Fox від банкрутства. 
+    Коли сумніви щодо окупності проєкту відпали, фільм отримав підзаголовок «Нова надія», і згодом з’явилися продовження — 
+    «Імперія завдає удару у відповідь» (1980) та «Повернення джедая» (1983).
   </p>
 </section>
 
@@ -96,8 +97,36 @@
     <strong>Люк Скайвокер</strong> — герой Альянсу Повстанців, джедай і син Енакіна Скайвокера.
   </div>
   <div class="character">
-    <img src="" alt="Дарт Вейдер">
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/76/Darth_Vader.jpg" alt="Дарт Вейдер">
     <strong>Дарт Вейдер</strong> — один з наймогутніших ситхів, у минулому — джедай Енакін Скайвокер.
+  </div>
+  <div class="character">
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/3c/Princess_Leia_Organa.png" alt="Принцеса Лея">
+    <strong>Принцеса Лея</strong> — лідер Повстанців, сестра Люка, символ мужності.
+  </div>
+  <div class="character">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/50/Han_Solo_-_Star_Wars.jpg" alt="Хан Соло">
+    <strong>Хан Соло</strong> — контрабандист і пілот «Тисячолітнього сокола», який став героєм Альянсу.
+  </div>
+  <div class="character">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Yoda_Empire_Strikes_Back.png" alt="Йода">
+    <strong>Йода</strong> — Великий магістр ордену джедаїв, відомий своєю мудрістю і силою.
+  </div>
+  <div class="character">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Obi-Wan_Kenobi.png" alt="Оби-Ван Кенобі">
+    <strong>Оби-Ван Кенобі</strong> — наставник Люка та вчитель Енакіна, символ вірності джедаїв.
+  </div>
+  <div class="character">
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/4b/R2-D2_Droid.png" alt="R2-D2">
+    <strong>R2-D2</strong> — дроїд-астромеханік, який завжди поруч у ключові моменти історії.
+  </div>
+  <div class="character">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/5d/C-3PO_droid.png" alt="C-3PO">
+    <strong>C-3PO</strong> — протокольний дроїд, що розуміє понад 6 мільйонів мов, часто опиняється у кумедних ситуаціях.
+  </div>
+  <div class="character">
+    <img src="https://upload.wikimedia.org/wikipedia/en/6/6d/Chewbacca-2-.jpg" alt="Чубакка">
+    <strong>Чубакка</strong> — воїн-вуккі, друг і напарник Хана Соло.
   </div>
 </section>
 
@@ -119,86 +148,83 @@
 <footer>
   © 2025 Фан-сайт «Зоряні війни». Неофіційний проєкт.
 </footer>
+
 <script>
-// === Анімація зірок на фоні ===
-const canvas = document.createElement('canvas');
-document.body.appendChild(canvas);
-canvas.style.position = 'fixed';
-canvas.style.top = 0;
-canvas.style.left = 0;
-canvas.style.zIndex = -1;
-canvas.style.width = '100%';
-canvas.style.height = '100%';
-canvas.style.pointerEvents = 'none';
+  // Анімація зірок
+  const canvas = document.createElement('canvas');
+  document.body.appendChild(canvas);
+  canvas.style.position = 'fixed';
+  canvas.style.top = 0;
+  canvas.style.left = 0;
+  canvas.style.zIndex = -1;
+  canvas.style.width = '100%';
+  canvas.style.height = '100%';
+  canvas.style.pointerEvents = 'none';
 
-const ctx = canvas.getContext('2d');
-let stars = [];
+  const ctx = canvas.getContext('2d');
+  let stars = [];
 
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  stars = [];
-  for (let i = 0; i < 200; i++) {
-    stars.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: Math.random() * 1.5 + 0.5,
-      dx: (Math.random() - 0.5) * 0.5,
-      dy: (Math.random() - 0.5) * 0.5
-    });
-  }
-}
-
-function drawStars() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = 'white';
-  stars.forEach(star => {
-    ctx.beginPath();
-    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
-    ctx.fill();
-    star.x += star.dx;
-    star.y += star.dy;
-
-    if (star.x < 0 || star.x > canvas.width) star.dx *= -1;
-    if (star.y < 0 || star.y > canvas.height) star.dy *= -1;
-  });
-  requestAnimationFrame(drawStars);
-}
-
-resizeCanvas();
-drawStars();
-window.addEventListener('resize', resizeCanvas);
-
-// === Анімація появи секцій при прокрутці ===
-const sections = document.querySelectorAll('section, .character');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    stars = [];
+    for (let i = 0; i < 200; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 1.5 + 0.5,
+        dx: (Math.random() - 0.5) * 0.5,
+        dy: (Math.random() - 0.5) * 0.5
+      });
     }
+  }
+
+  function drawStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'white';
+    stars.forEach(star => {
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+      ctx.fill();
+      star.x += star.dx;
+      star.y += star.dy;
+      if (star.x < 0 || star.x > canvas.width) star.dx *= -1;
+      if (star.y < 0 || star.y > canvas.height) star.dy *= -1;
+    });
+    requestAnimationFrame(drawStars);
+  }
+
+  resizeCanvas();
+  drawStars();
+  window.addEventListener('resize', resizeCanvas);
+
+  // Анімація появи секцій
+  const sections = document.querySelectorAll('section, .character');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    section.style.opacity = 0;
+    section.style.transform = 'translateY(40px)';
+    section.style.transition = 'all 0.8s ease-out';
+    observer.observe(section);
   });
-}, {
-  threshold: 0.1
-});
 
-sections.forEach(section => {
-  section.style.opacity = 0;
-  section.style.transform = 'translateY(40px)';
-  section.style.transition = 'all 0.8s ease-out';
-  observer.observe(section);
-});
-
-// === Анімація заголовка ===
-const header = document.querySelector('header h1');
-header.style.transition = 'transform 1s ease-in-out';
-header.addEventListener('mouseover', () => {
-  header.style.transform = 'scale(1.1) rotate(-1deg)';
-});
-header.addEventListener('mouseout', () => {
-  header.style.transform = 'scale(1)';
-});
+  // Анімація заголовка
+  const header = document.querySelector('header h1');
+  header.style.transition = 'transform 1s ease-in-out';
+  header.addEventListener('mouseover', () => {
+    header.style.transform = 'scale(1.1) rotate(-1deg)';
+  });
+  header.addEventListener('mouseout', () => {
+    header.style.transform = 'scale(1)';
+  });
 </script>
 
 </body>
